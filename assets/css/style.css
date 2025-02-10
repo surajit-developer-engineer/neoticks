@@ -301,15 +301,16 @@ a.dfltBtn:hover {
   left: 50%;
 }
 .home-banner-sec .bnr-caption{
-  position: absolute;
-  width: 100%;
+  position: relative;
+  padding-top: 90px;
+  /* width: 100%;
   left: 0;
   top: 52%;
   transform: translateY(-50%);
   -o-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%); */
 }
 .home-banner-sec .bnr-caption .bdFlex{
   display: flex;
@@ -1112,21 +1113,7 @@ a.dfltBtn:hover {
 }
 
 @media (max-width: 1199px) {
-  .home-banner-sec .bnr-caption h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  .home-banner-sec .bnr-caption h2 {
-    font-size: 30px;
-    line-height: 38px;
-    margin-bottom: 10px;
-  }
-  .home-banner-sec .bnr-caption p {
-    font-size: 15px;
-  }
-  .itembg1{
-    height: 450px;
-  }
+  
 }
 
 @media (max-width: 991px) {
@@ -1134,293 +1121,192 @@ a.dfltBtn:hover {
 }
 
 @media (max-width: 767px) {
-  .slider_right {
+  .hdrToprow{
     display: none;
   }
-  .about-us-sec h2 {
-    font-size: 40px;
-    line-height: 45px;
-  }
-  .column1 {
-    margin-bottom: 0px;
-    text-align: center;
-    max-width: 100%;
-    margin-left: 0;
-    padding: 0 20px;
-  }
-  .column2 {
-    margin-right: 0;
-    background: none;
-    padding: 0 20px;
-    margin-bottom: 40px;
-    width: 100%;
-  }
-  .column2 figure{
-    width: 70%;
-    margin: 0 auto;
-  }
-  .column1 h3 {
-    font-size:25px;
-    font-weight: 600;
-  }
-  .howitWorksSec ul li {
-    width: 100%;
-    text-align: center;
+  .hdr-row{
     justify-content: center;
-    padding-right: 0;
   }
-  .howitWorksSec ul li figure {
-    margin-right: 0;
-    display: inline-block;
-    margin-bottom: 15px;
-  }
-  .howitWorksSec ul li p {
+  .home-banner-sec{
     height: auto;
-    text-align: center;
+    padding-bottom: 50px;
   }
-  .fundingProcessSteps h3 {
-    font-size: 25px;
-    text-align: center;
-  }
-  .fundingProcessSteps h2 {
-    font-size: 40px;
-  }
-  .fundingProStepsLeft {
-    width: 100%;
-    padding-top: 0;
-    text-align: center;
-  }
-  .fundingProStepsLeft p {
-    max-width: 100%;
-  }
-  .processStepsNew {
-    border-top-left-radius: 0;
-  }
-  .fundingProStepsRight{
-    width: 100%;
-    margin-top: 30px;
-  }
-  .fundingProStepsRight:after {
-    display: none;
-  }
-  .industriesSec ul li {
-    width: 50%;
-  }
-  .columnOne {
-    width: 100%;
-    text-align: center;
-  }
-  .columnTwo {
-    width: 45%;
-    margin-top: 50px;
-  }
-  .columnThree {
-    width: 45%;
-    margin-top: 50px;
-    text-align: center;
-  }
-  .fundRightFlex {
+  .home-banner-sec .bnr-caption .bdFlex{
     flex-wrap: wrap;
   }
-  .fundRightFlexLeft{
-    width: 100%;
-    background: none;
-    margin-right: 0;
-    height: auto;
-    margin-bottom: 30px;
-  }
-  .fundRightFlexRight{
-    width: 100%;
-    text-align: center;
-  }
-  .fundRightFlexRight h2 {
+  .home-banner-sec .bnr-caption h2{
     font-size: 40px;
-    line-height: 45px;
-    margin-bottom: 20px;
-  }
-  .benefitsSecRow {
-    flex-wrap: wrap;
-  }
-  .benefitsSecleftCol {
-    width: 100%;
-    border-top-right-radius: 0;
-    padding: 50px 20px;
-  }
-  .benefitsSecrightCol {
-    width: 100%;
-  }
-  .benefitsSecleftCol:before{
-    display: none;
-  }
-  .benefitsSecleftCol h2 {
-    font-size: 40px;
-    line-height: 45px;
-  }
-  .industriesSec h2 {
-    font-size: 40px;
-    line-height: 45px;
-  }
-  .applySec h2 {
-    font-size: 40px;
-    line-height: 45px;
-  }
-  .applySecdFlex li {
-    width: 100%;
-  }
-  .faqSec h2 {
-    font-size: 40px;
-    line-height: 45px;
-  }
-  .detailsTitle {
-    font-size: 20px;
-    padding: 25px 110px 26px 25px !important;
-    background: #fff;
-  }
-  .readytoproSec h2 {
-    font-size: 40px;
-    line-height: 45px;
+    line-height: 50px;
+    margin-top: 0;
   }
   .slider_left {
     width: 100%;
     text-align: center;
   }
-  .home-banner-sec .bnr-caption h2 {
-    font-size: 40px;
-    line-height: 45px;
-  }
-  .itembg1{
-    height: 500px;
-  }
-  .about-us-sec .egt-row {
-    justify-content: center;
+  .slider_right {
     width: 100%;
   }
-  .about-us-sec figure{
-    margin-bottom: 30px;
+  .home-banner-sec{
+    height: auto;
   }
-  .directFunders:after{
-    display: none;
+  .platformsSec h2 {
+    font-size: 40px;
+    line-height: 50px;
   }
-  .directFundersRow {
+  .platformsSecFlex {
     flex-wrap: wrap;
   }
-  .column1 h2 {
-    font-size: 40px;
-    line-height: 45px;
-  }
-  .howitWorksSec h2 {
-    font-size: 40px;
-    line-height: 45px;
-  }
-  .fundingProcessSteps{
-    text-align: center;
-  }
-  .fundingProStepsLeft ul li {
+  .platformsSecCol {
+    width: 100%;
     text-align: left;
+    margin-bottom: 25px;
   }
-  .fundRightFlexRight ul {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .benefitsSecrightCol img{
-    left: 0;
-    margin-top: 50px;
-  }
-  .industriesSec{
-    text-align: center;
-  }
-  .footerFlex ul{
-    text-align: center;
-    justify-content: center;
-  }
-  .hdrToprow ul li {
-    padding: 0 5px !important;
-    display: flex;
-    align-items: center;
-  }
-  .hdrToprow ul li a {
-    font-size: 15px;
+  .platformsSecCol h3 {
+    font-size: 30px;
+    line-height: 40px;
+    padding-bottom: 15px;
   }
 
-  .applicationBody {
-    width: 90%;
-    margin: 20px auto;
-    padding: 1.5rem;
-  }
-  .formFlex{
+  .featuredSSecFlex{
     flex-wrap: wrap;
-    margin: 0;
   }
-  .formCol {
+  .featuredSSecFlex li{
     width: 100%;
-    margin-top: 20px;
   }
-  div[class^="cat"] input:checked ~ .question-wrap {
-    max-height: 3000px;
+  .dotted_curve_line{
+    display: none;
   }
-  .formFlex [type=button] {
-    margin-top: 20px;
+  .dotted_curve_line2{
+    display: none;
   }
-  .memberhowitWorksSec h2 {
+  .whyNeoticksSecFlex{
+    flex-wrap: wrap;
+  }
+  .whyNeoticksCol {
+    width: 100%;
+  }
+  .partnersSec h2 {
+    font-size: 40px;
+  }
+  .topReviewedSSec h2 {
     font-size: 40px;
     line-height: 45px;
   }
-  .memberhowitWorksSec ul li{
-    width: 50%;
-    padding-right: 0;
+  .topReviewedSFlex {
+    flex-wrap: wrap;
   }
-  .sec-title h2{
-    font-size: 25px;
-  }
-  .sec-title {
-    margin-bottom: 30px;
-  }
-  .pricing-section ul li{
+  .topReviewedSFlexCol {
     width: 100%;
-    margin-bottom: 30px;
-    text-align: center;
   }
-  .pricing-section ul li.number01:before{
-    display: none;
+  .whyNeoticksCol h2 {
+    font-size: 40px;
   }
-  .pricing-section ul li.number02:before{
-    display: none;
+  .card__group {
+    height: auto;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    padding: 0;
+    margin-bottom: 50px;
   }
-  .pricing-section ul li.number03:before{
-    display: none;
+  .card {
+    &:nth-of-type(1) {
+        grid-row: auto;
+        height: auto;
+    }
   }
+  .card {
+    &:nth-of-type(2) {
+        grid-row: auto;
+    }
+  }
+  .card {
+    &:nth-of-type(3) {
+        grid-row: auto;
+    }
+  }
+  .card {
+    &:nth-of-type(4) {
+        grid-row: auto;
+    }
+  }
+  .card {
+    &:nth-of-type(5) {
+        grid-row: auto;
+    }
+  }
+  .card {
+    &:nth-of-type(6) {
+      grid-row: auto;
+    }
+  }
+  .card {
+    h2 {
+        font-size: 40px;
+    }
+  }
+  .getTouchSec h2 {
+    font-size: 40px;
+  }
+  .getTouchSecFlex {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .getTouchSecFlexLeft {
+    width: 100%;
+  }
+  .getTouchSecFlex h3 {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  .getTouchSecFlexRight {
+    margin-top:30px;
+    width: 100%;
+    padding-right: 0;
+}
+.getTouchSec {
+  padding: 70px 0 90px;
+}
+.btm-footer {
+  position: relative;
+  padding: 30px 0 30px;
+}
+.featuredSSec h2 {
+  font-size: 40px;
+  line-height: 50px;
+}
+.smallText {
+  width: 100%;
+}
+.footer-hero-shape {
+  bottom: -1px;
+}
+.btm-footer ul {
+  flex-wrap: wrap;
+}
+.btm-footer ul li {
+  border-left:none;
+  border-bottom: solid 1px #343333;
+  padding: 10px 0;
+  width: 100%;
+}
+.btm-footer ul li:last-child {
+  border-bottom: none;
+}
+.partnersSec ul li {
+  width: 100%;
+}
+.orderOne{
+  order: 1;
+}
+.orderTwo{
+  order: 2;
+}
+
 }
 
 
-@media (max-width: 576px) {
-  ul.languages li.button a{
-    display: none;
-  }
-  .slider_right {
-    display: none;
-  }
-  .column2 figure{
-    width: 80%;
-    margin: 0 auto;
-  }
-  .appdFlex {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .addressSec {
-    margin-top: 30px;
-    float: right;
-    text-align: center;
-  }
-  .memberhowitWorksSec ul li{
-    width: 100%;
-    margin-bottom: 20px;
-    justify-content: center;
-  }
-  .memberhowitWorksSec ul li p {
-    text-align: center;
-    height: auto;
-  }
+@media (max-width: 576px) {  
 
   
 }
