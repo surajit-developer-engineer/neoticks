@@ -440,6 +440,98 @@ a.dfltBtn:hover {
   width: 100%;
 }
 
+/*=============== Our Powerful Platforms Style ===============*/
+.poweringGrowthSec{
+  position: relative;
+  width: 100%;
+  margin: 70px 0;
+  text-align: center;
+}
+.poweringGrowthSec h2 {
+  font-size: 63px;
+  color: #000;
+  margin-bottom:30px;
+  font-weight: 500;
+  line-height: 75px;
+}
+.poweringGrowthSec p a{
+  color: #1468d2;
+}
+.poweringGrowthSecFlx{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.poweringGrowthSecCol{
+  width: 45%;
+  text-align: left;
+}
+.poweringGrowthSecCol h5{
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+  padding-bottom: 20px;
+}
+.poweringGrowthSecCol ul{
+  list-style: none;
+}
+.poweringGrowthSecCol ul li{
+  margin-bottom: 20px;
+  position: relative;
+}
+.poweringGrowthSecCol ul li:after{
+  content: "";
+  width: 17px;
+  height: 17px;
+  border: solid 4px #1abc9c;
+  border-radius: 100%;
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+.poweringGrowthSecCol ul li p{
+  font-size: 17px;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.poweringGrowthSecCol ul li p strong{
+  font-size: 18px;
+  color: #000;
+  font-weight: 700;
+  padding-left: 30px;
+}
+.dividerSec{
+  display: flex;
+  width: 1px;
+  background: #cccccc;
+}
+.btn-strock{
+  border: solid 2px #1abc9c;
+  border-radius: 30px;
+  padding: 10px 20px;
+  color:#1abc9c;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 20px;
+  display: inline-block;
+}
+.btn-strock:hover{
+  border: solid 2px #1abc9c;
+  background: #1abc9c;
+  color:#fff;
+}
+.btn-strock i{
+  margin-top: 4px;
+  float: right;
+  margin-left: 10px;
+}
+.mt-50{
+  margin-top: 50px;
+}
+
+
+
 
 /*=============== Our Powerful Platforms Style ===============*/
 .platformsSec{
@@ -1302,6 +1394,24 @@ a.dfltBtn:hover {
 .orderTwo{
   order: 2;
 }
+.poweringGrowthSec h2 {
+  font-size: 40px;
+  line-height: 50px;
+}
+.poweringGrowthSecFlx {
+  flex-wrap: wrap;
+}
+.poweringGrowthSecCol {
+  width: 100%;
+}
+.btn-strock{
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+.poweringGrowthSecFlx {
+  margin-top: 0;
+}
+
 
 }
 
