@@ -1,3 +1,84 @@
+// ========================== Hot Topics JS ==========================
+$(document).ready(function () {
+    $('.hottopics-carousel').owlCarousel({
+        loop: true,
+        items: 9,
+        stagePadding: 0,
+        margin: 15,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        smartSpeed: 2000,
+        autoplayTimeout: 7000,
+        autoplayHoverPause: false, // Disable pause on hover
+        responsive: {
+            0: {
+              nav: false,
+              items: 3
+            },        
+            600: {
+              nav: false,
+              items: 4
+            },        
+            1024: {
+              items: 5
+            },        
+            1366: {
+              items: 6
+            }
+          }
+
+    });
+
+    $( ".hottopics-carousel .owl-prev").html('<i class="tiIcon ti-angle-left"></i>');
+    $( ".hottopics-carousel .owl-next").html('<i class="tiIcon ti-angle-right"></i>');
+
+});
+
+
+// ========================== Featured Brands carousel JS ==========================
+$(document).ready(function () {
+    $('.featuredBrands-carousel').owlCarousel({
+        loop: true,
+        items: 4,
+        stagePadding: 0,
+        margin: 5,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        smartSpeed: 2000,
+        autoplayTimeout: 7000,
+        autoplayHoverPause: false, // Disable pause on hover
+        responsive: {
+            0: {
+              nav: false,
+              items: 1
+            },
+        
+            600: {
+              nav: false,
+              items: 1
+
+            },
+        
+            1024: {
+              items: 4
+            },
+        
+            1366: {
+              items: 4
+            }
+          }
+
+    });
+
+    $( ".featuredBrands-carousel .owl-prev").html('<i class="tiIcon ti-angle-left"></i>');
+    $( ".featuredBrands-carousel .owl-next").html('<i class="tiIcon ti-angle-right"></i>');
+
+});
+
+
+
 $(document).ready(function() {
     $("div.dropdown button").click((event) => {
       if($(event.target).next().css('display') == 'flex'){
@@ -31,78 +112,6 @@ $(document).ready(function() {
   
   
   
-// ========================== Hot Topics JS ==========================
-$(document).ready(function () {
-    $('.hottopics-carousel').owlCarousel({
-        loop: true,
-        items: 9,
-        stagePadding: 0,
-        margin: 15,
-        nav: true,
-        dots: false,
-        autoplay: true,
-        smartSpeed: 2000,
-        autoplayTimeout: 7000,
-        autoplayHoverPause: false, // Disable pause on hover
-        responsive: {
-            0:{
-                nav: false,
-            },
-            767:{
-                items: 5,
-                nav: false,
-            },
-            1024: {
-                items: 9,
-            },
-            1200: {
-                items: 9
-            }
-        }
-
-    });
-
-    $( ".hottopics-carousel .owl-prev").html('<i class="tiIcon ti-angle-left"></i>');
-    $( ".hottopics-carousel .owl-next").html('<i class="tiIcon ti-angle-right"></i>');
-
-});
-
-
-// ========================== Featured Brands carousel JS ==========================
-$(document).ready(function () {
-    $('.featuredBrands-carousel').owlCarousel({
-        loop: true,
-        items: 4,
-        stagePadding: 0,
-        margin: 5,
-        nav: true,
-        dots: false,
-        autoplay: true,
-        smartSpeed: 2000,
-        autoplayTimeout: 7000,
-        autoplayHoverPause: false, // Disable pause on hover
-        responsive: {
-            0:{
-                nav: false,
-            },
-            767:{
-                items: 3,
-                nav: false,
-            },
-            1024: {
-                items: 4,
-            },
-            1200: {
-                items: 4
-            }
-        }
-
-    });
-
-    $( ".featuredBrands-carousel .owl-prev").html('<i class="tiIcon ti-angle-left"></i>');
-    $( ".featuredBrands-carousel .owl-next").html('<i class="tiIcon ti-angle-right"></i>');
-
-});
 
 
 
