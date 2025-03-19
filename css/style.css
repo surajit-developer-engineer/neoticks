@@ -78,7 +78,7 @@ input:focus,
 input:hover,
 textarea:focus,
 textarea:hover{
-	border-color: #76c7ff !important;
+	border-color: var(--primary) !important;
 	box-shadow: none !important;
 	outline: none;
 }
@@ -95,7 +95,7 @@ a{
 	text-decoration: none;
 	border: none;
 	outline: 0;
-	color: #76c7ff;
+	color: var(--primary);
 }
 
 a:hover{
@@ -156,6 +156,10 @@ p{
 .mt-70{
 	margin-top: 70px;
 }
+.mt-30{
+	margin-top: 30px;
+}
+
 
 /*================ Header Style Start ================*/
  .container{
@@ -521,7 +525,7 @@ input[type="text"]::placeholder{
 	margin-top: 36px;
 }
 .banner-text{
-	width: 46%;
+	width: 47%;
 	padding-left: 40px;
 }
 .banner-text h1{
@@ -734,7 +738,7 @@ input[type="text"]::placeholder{
 }
 .trending-grids-3grid{
 	display: grid;
-	grid-template-columns:repeat(3, 1fr);
+	grid-template-columns:repeat(4, 1fr);
 	gap: 30px;
 	margin-top: 30px;	
 }
@@ -750,8 +754,14 @@ input[type="text"]::placeholder{
 	position: relative;
 	overflow: hidden;
 }
+.box-image2{
+	height: 225px;
+}
+.box-image2 img{
+	height: 100%;
+}
 .trending-grids-3grid .box-image{
-	height: 200px;
+	height: 180px;
 }
 .box-image-height{
 	height: 360px;
@@ -846,6 +856,90 @@ input[type="text"]::placeholder{
   margin: 0 auto;
 }
 
+/*************** Featured Brands Style Start ***************/
+.signup-sec{
+	width: 100%;
+	margin: 0 0 90px;
+	text-align: center;
+}
+.signupbg{
+    width: 100%;
+    background: url(../images/banner-shadow.png) 0 0 no-repeat #1F6D57;
+    background-size: cover;
+    border-radius: 20px;
+}
+.signupbg-inner{
+    width: 100%;
+    background: url(../images/news-bg.png) 0 0 no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+	padding: 60px 0 70px;
+}
+.signup-sec h2{
+	font-size: 1.375rem;
+	line-height: 1.625rem;
+	color: var(--white);
+	font-weight: 600;
+	padding-bottom: 10px;
+}
+.signup-sec p{
+	font-size: 1rem;
+	color: var(--white);
+	padding-bottom: 10px;
+	line-height: 1.6;
+}
+.signup-sec p span{
+	display: block;
+}
+.signup-form-sec{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	max-width: 80%;
+	margin: 0 auto 25px;
+}
+.signup-form-col{
+	width: 48%;
+}
+.signup-form-col label{
+	display: block;
+	text-align: left;
+	font-weight: 500;
+	font-size: 17px;
+	color: var(--white);
+}
+.signup-form-col input[type="text"]{
+	border: 1px solid #053f2e;
+    border-radius:30px;
+    padding: 13px 25px 14px 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 100%;
+	text-align: left;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+	background: #155442;
+	color: #fff;
+}
+.signup-sec input[type="text"]::placeholder{
+	color: #c0c0c0;
+}
+.signup-sec input[type="submit"]{
+	font-size: 15px;
+    color: var(--white);
+    font-weight: 600;
+    border: solid 1px var(--primary);
+    border-radius: 30px;
+    padding: 10px 50px;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    background: #155442;
+}
+.signup-sec input[type="submit"]:hover{
+	background: #2ecf9d;
+    color: var(--black);
+    border: solid 1px #2ecf9d;
+}
 
 /*************** Featured Brands Style Start ***************/
 .brands-sec{
@@ -903,6 +997,14 @@ input[type="text"]::placeholder{
 }
 .featuredBrands-carousel .brands-box img{
 	width: auto;
+}
+.featured-icon-holder {
+    margin-bottom: 15px;
+	display: flex;
+	height: 60px;
+	justify-content: center;
+	align-items: center;
+	margin: 20px auto 20px;
 }
 .brands-box h3{
 	color: var(--black);
@@ -975,22 +1077,26 @@ input[type="text"]::placeholder{
 
 .articles-sec{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	margin-top: 20px;
 }
 .articles-col{
-	width: 48%;	
+	width: 32%;	
+	background: #f3f3f3;
+	border-radius: 20px;
+	padding: 20px;
 }
 .articles-img-holder{
 	position: relative;
     overflow: hidden;
-    border-radius: 24px;
+    border-radius: 15px;
     background: #fafaf9;
-	height: 390px;
+	height: 200px;
 	margin-bottom: 25px;
 }
 .articles-img-holder img{
-    border-radius: 24px;
+    border-radius: 15px;
 	width: 100%;
 	height: 100%;
 }
@@ -1020,56 +1126,111 @@ input[type="text"]::placeholder{
 .articles-text-holder a:hover{
 	background: var(--primary);
 	color: var(--white);
+	cursor: pointer;
 }
+.articles-col:hover{
+    background: var(--primary);
+}
+.articles-col:hover .articles-text-holder h3{
+    color: var(--white);
+}
+.articles-col:hover .articles-text-holder p{
+    color: var(--white);
+}
+.articles-col:hover .articles-text-holder a {
+    color: var(--white);
+	border: solid 1px var(--white);
+}
+
+
 
 /*================ Latest News Style Start ================*/
 
 .latestnews-sec{
-	position: relative;    
-    height: 260px;
-    width: 100%;
-    background: url(../images/banner-shadow.png) 0 0 no-repeat #1F6D57;
-    background-size: 100%;
-    border-radius: 20px;
-	text-align: center;
+	position: relative;
+    width: 100%;   
+	margin-bottom: 90px; 
 }
-.bgShade{
-	background: url(../images/news-bg.png) 0 0 no-repeat;
-	border-radius: 20px;
-	background-size: cover;
+.newsSec{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+.newsSeccol{
+	width: 49.6%;	
+	position: relative;
+	height: 450px;
+}
+.newsSeccol img{
+	height: 100%;
+	width: 100%;
+	border-radius: 5px;
+}
+.newstoprow{
+	width: 100%;
+	position: relative;
+	height: 221px;
+	margin-bottom: 8px;
+}
+.newstoprow .newstext-holder h2{
+	font-size: 25px;
+}
+.newstoprow .newstext-holder p{
+	font-size: 14px;
+	margin: 0;
+}
+.newstoprow img{
+	width: 100%;
 	height: 100%;
 }
-.latestnews-sec h2{
-	font-size: 35px;
-    color: var(--white);
-    padding-top: 35px;
-    padding-bottom: 23px;
-    line-height: 1.1;
-    font-weight: 600;
+.newsbottomrow{
+	display: flex;
+	justify-content: space-between;
 }
-.latestnews-sec p{
-	font-size: 15px;
-    color: var(--white);
-    line-height: 1.1;
-    font-weight: 600;
+.newsbottomrow-col{
+	position: relative;
+	width: 49.3%;
+	height: 221px;
 }
-.latestnews-sec a{
-	font-size: 15px;
-    color: var(--white);    
-    font-weight: 600;
-	border: solid 1px var(--white);
-	background: var(--primary);
-	border-radius: 30px;
+.newsbottomrow-col .newstext-holder h2{
+	font-size: 20px;
+}
+.newsbottomrow-col .newstext-holder p{
+	font-size: 14px;
+	margin: 0;
+}
+.newsbottomrow-col img{
+	width: 100%;
+	height: 100%;
+}
+.newstext-holder{
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	width: 100%;	
+}
+.newstext-holder h2{
+	font-size: 30px;	
+	font-weight: 600;
+	color:var(--white);
 	padding: 10px 20px;
-	display: inline-flex;
-	align-items: center;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
-.latestnews-sec a i{
-	margin-left: 5px;
+.catTag{
+    background: var(--black);
+    padding: 0px 10px;
+    font-size: 15px;
+    color: var(--white);
+    display: inline-block;
+    margin: 0 20px !important;
+    border-radius: 5px;
 }
-.latestnews-sec a:hover{
-	background: var(--white);
-	color: var(--primary);
+.autherText{
+	color: var(--white);
+	padding-left: 20px;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+	margin: 0;
 }
 
 
@@ -1147,7 +1308,7 @@ input[type="text"]::placeholder{
 /*================ Footer Style Start ================*/
 .footer{
 	position: relative;
-	padding: 50px 0 0 0;
+	padding: 70px 0 0 0;
 	background: #f7f7f7;
 	border-top: solid 1px #e6e6e6;
 	margin-top: 100px;
@@ -1241,7 +1402,7 @@ input[type="text"]::placeholder{
 }
 
 .footer-artical{
-	width: 20%;
+	width: 30%;
 }
 .footer-artical ul li{
 	border-bottom: solid 1px #ccc;
@@ -1249,8 +1410,19 @@ input[type="text"]::placeholder{
 	color: var(--textColor);
 	padding: 10px 0;
 }
+.footer-artical ul li.borderNone{
+	border-bottom: none;
+	padding: 5px 0;
+}
 .footer-artical ul li .flxrow{
 	display: flex;
+	align-items: center;
+}
+.footer-artical ul li .flxrow.boxbg{
+	background: var(--white);
+	padding: 10px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
+	border-radius: 10px;
 }
 .footer-artical ul li .flxrow .img-holder{
     width: 65px;
@@ -1265,7 +1437,7 @@ input[type="text"]::placeholder{
 	border-radius: 7px;
 }
 .footer-artical ul li .flxrow .text-holder{
-	width: 70%;	
+	width: 90%;	
 }
 .footer-artical ul li .flxrow .text-holder h4{
 	font-size: 16px;
@@ -1288,7 +1460,7 @@ input[type="text"]::placeholder{
 	background: #f1f1f1;
 	border-top: solid 1px #e6e6e6;
 	padding: 20px 0;
-	margin-top: 50px;
+	margin-top: 60px;
 }
 .footer-copyright p{
 	font-size: 15px;
@@ -1296,6 +1468,16 @@ input[type="text"]::placeholder{
 	text-align: center;
 	margin-bottom: 0;
 }
+.borderTop{
+	border-top: solid 1px #ccc;
+	margin: 40px 0;
+	padding-top: 15px;
+}
+.footer-artical p{
+	font-size: 16px;
+	line-height: 1.8;
+}
+
 
 /*================ Footer Style End ================*/
 
@@ -1380,7 +1562,7 @@ input[type="text"]::placeholder{
 		display: inherit;
 	}
 	.grid-box{
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 	}
 	.brands-sec .brands-header{
 		flex-wrap: wrap;
@@ -1469,15 +1651,60 @@ input[type="text"]::placeholder{
 	.top-search{
 		display: none;
 	}
+	.trending-grids-3grid .box-image {
+		height: auto;
+	}
+	.footer-artical p {
+		text-align: center;
+	}
+	.signup-form-sec{
+		flex-wrap: wrap;
+		max-width: 90%;
+		margin-bottom: 0;
+	}
+	.signup-sec p span {
+		display: inline;
+	}
+	.signup-form-col {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.newsSec {
+		flex-wrap: wrap;
+	}
+	.newsSeccol {
+		width: 100%;
+		height: auto;
+		margin-bottom: 10px;
+	}
+	.newsbottomrow{
+		flex-wrap: wrap;
+	}
+	.newsbottomrow-col {
+		width: 100%;
+		height: auto;
+		margin-bottom: 7px;
+	}
+	.newstext-holder h2 {
+		font-size: 25px;
+	}
+	.autherText{
+		font-size: 15px;
+	}
+
 }
 
 
 @media only screen and (max-width:500px){
-	
+	.trending-grids-3grid .box-image {
+		height: 230px;
+	}
 }
 
 
 @media only screen and (max-width:400px){
-	
+	.trending-grids-3grid .box-image {
+		height: 210px;
+	}
 }
 /*=========================== Responsive Style Sheet End Here ===========================*/

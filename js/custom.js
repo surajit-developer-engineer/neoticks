@@ -21,10 +21,10 @@ $(document).ready(function () {
               items: 4
             },        
             1024: {
-              items: 5
+              items: 7
             },        
             1366: {
-              items: 6
+              items: 9
             }
           }
 
