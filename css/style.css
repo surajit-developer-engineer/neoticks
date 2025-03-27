@@ -162,11 +162,17 @@ p{
 .pb-0{
 	padding-top: 0 !important;
 }
+.mt-10{
+	margin-top: 10px !important;
+}
+.mt-50{
+	margin-top: 50px !important;
+}
 .mt-70{
-	margin-top: 70px;
+	margin-top: 70px !important;
 }
 .mt-30{
-	margin-top: 30px;
+	margin-top: 30px !important;
 }
 .mt-95{
 	margin-top: 95px !important;
@@ -186,7 +192,7 @@ p{
 	padding: 0;
  }
  header{
-	margin-top: 100px;
+	margin-top: 95px;
  }
  .header {
     display: flex;
@@ -219,6 +225,7 @@ p{
 	background: none;
 	outline: none;
 	border: none;
+	color: var(--black);
   }
   nav .dropdown button span {
 	font-size: 1.25rem;
@@ -309,37 +316,37 @@ p{
 	color: red;
   }  
   .hamburger {
-	width: 37px;
+	width: 28px;
 	height: 24px;
 	text-align: right;
 	display: block;
+	margin-top: 10px;
   }
   .hamburger:hover{
 	cursor: pointer;
   }
   .hamburger .bar {
 	width: 100%;
-	height: 4px;
+	height: 3px;
 	background-image: var(--greenshadebg);
 	border-radius: 5px;
 	margin-bottom: 5px;
 	float: right;
   }
-  .hamburger:first-child{
-	margin-top: 0;
+  .hamburger .animInfo.lastbar{
+	width: 100%;
   }
+  /* .hamburger:first-child{
+	margin-top: 0;
+  } */
 .hamburger .secbar {
-	width: 33px;
+	width: 28px;
 	float: right;
   }
   .hamburger .lastbar{
-	width: 25px;
+	width: 28px;
 	float: right;
 	margin: 0;
-  }
-  .hamburger .animInfo{
-	margin-bottom: 7px;
-	width: 100%;
   }
   .rotate {
 	transform: rotate(90deg);
@@ -363,7 +370,7 @@ p{
 	  display: none;
 	  background: #fff;
 	  position: fixed;
-	  top: 90px;
+	  top: 89px;
 	  left: 0;
 	  z-index: 99;
 	  padding: 20px 0;
@@ -374,9 +381,7 @@ p{
 	  width: 25%;
 	  padding: 0;
 	  margin: 0;
-	}
-   
-
+	}  
 	/* nav .dropdown button:hover{
 	  color: black;
 	  text-decoration: none;
@@ -402,6 +407,9 @@ p{
 		transform: inherit;
 		display: block;
 		margin-bottom: 10px;
+	}
+	.hamburger .secbar.animInfo{
+		width: 28px;
 	}
    
   @media (max-width: 600px){
@@ -429,6 +437,7 @@ p{
 		width: 100%;
 		flex-direction: column;
 		top: 80px;
+		padding: 0 0 20px;
 	  }
 	  nav .dropdown button span {
 		display: inline !important;        
@@ -444,6 +453,52 @@ p{
 		margin-bottom: 0;
 		margin-right: 10px;
 	}
+	.hamburger:first-child .bar{
+		/* margin-bottom: 6px; */
+		width: 100%;
+		top: 7px;
+		position: relative;
+	  }
+	  .animInfo {
+		animation-duration: .5s;
+		animation-fill-mode: forwards;
+		animation-timing-fucntion: ease;
+	  }
+	  @keyframes bar1Anim {
+		0%{transform: rotate(0deg) translate(0px);}
+		100%{transform: rotate(45deg) translate(4px, 8px);}
+	  }
+	  @keyframes bar2Anim {
+		0%{opacity: 1;}
+		100%{opacity: 0;}
+	  }
+	  @keyframes bar3Anim {
+		0%{transform: rotate(0deg) translate(0px);}
+		100%{transform: rotate(-45deg) translate(4px, -8px);}
+	  }
+	  
+	  @keyframes bar1AnimReverse {
+		0%{transform: rotate(45deg) translate(6px, 10px);}
+		100%{transform: rotate(0deg) translate(0px);}
+	  }
+	  @keyframes bar2AnimReverse {
+		0%{opacity: 0;}
+		100%{opacity: 1;}
+	  }
+	  @keyframes bar3AnimReverse {
+		0%{transform: rotate(-45deg) translate(6px, -10px);}
+		100%{transform: rotate(0deg) translate(0px);}
+	  }
+	  
+	  /* Animation for navigation appearing */
+	  @keyframes navAnim {
+		0%{opacity: 0;}
+		100%{opacity: 1;}
+	  }
+	  @keyframes navAnimReverse {
+		0%{opacity: 1;}
+		100%{opacity: 0;}
+	  }
   }
   
   /* Animation for hamburger menu */
@@ -454,7 +509,7 @@ p{
   }
   @keyframes bar1Anim {
 	0%{transform: rotate(0deg) translate(0px);}
-	100%{transform: rotate(45deg) translate(6px, 10px);}
+	100%{transform: rotate(45deg) translate(4px, 8px);}
   }
   @keyframes bar2Anim {
 	0%{opacity: 1;}
@@ -462,7 +517,7 @@ p{
   }
   @keyframes bar3Anim {
 	0%{transform: rotate(0deg) translate(0px);}
-	100%{transform: rotate(-45deg) translate(6px, -10px);}
+	100%{transform: rotate(-45deg) translate(4px, -8px);}
   }
   
   @keyframes bar1AnimReverse {
@@ -498,9 +553,9 @@ p{
 	justify-content: space-between;
 	align-items: center;
 }
-/* .logo{
-	width: 225px;
-} */
+.logo{
+	width: 250px;
+}
 .form-search{
 	width: 500px;
 }
@@ -1011,6 +1066,16 @@ input[type="text"]::placeholder{
 .blackText{
 	color: var(--black) !important;
 }
+.selectDropDown select{
+	background-image: linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%),
+    linear-gradient(to right, transparent, transparent);
+	background-position: calc(100% - 25px) calc(1.4em + 1px),
+	calc(100% - 20px) calc(1.5em + 0px),
+	calc(100% - 2.8em) 0.9em;
+	background-size: 5px 5px, 5px 5px, 1px 1.5em;
+	background-repeat: no-repeat;
+}
 .signup-form-col textarea{
 	border: 1px solid #0b1130;
     border-radius:30px;
@@ -1111,6 +1176,22 @@ input[type="text"]::placeholder{
 	grid-template-columns: repeat(4, 1fr);
 	column-gap: 30px;
     margin-top: 20px;
+}
+.partnership-card{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 35px;
+    margin-top: 20px;
+}
+.partnership-card .item{
+	margin-bottom: 35px;
+}
+.partnership-card .item .brands-box{
+	padding: 20px;
+}
+.partnership-card .item p{
+	margin-bottom: 0;
 }
 .featured-icon-holder {
     margin-bottom: 15px;
@@ -1487,7 +1568,7 @@ input[type="text"]::placeholder{
 }
 .footer-logo{
 	margin-bottom: 20px;
-	/* width: 200px; */
+	width: 220px;
 }
 .footer-menu-sec{
 	width: 16%;
@@ -1576,8 +1657,8 @@ input[type="text"]::placeholder{
 	color: var(--primary);
 }
 .footer-artical ul li .flxrow .img-holder{
-    width: 65px;
-    height: 50px;
+    width: 75px;
+    height: 55px;
 	background: var(--primary);
 	border-radius: 7px;
 	margin-right: 10px;
@@ -1600,7 +1681,7 @@ input[type="text"]::placeholder{
 	font-size: 15px;
 	color: var(--textColor);
 	margin-bottom: 0;
-	line-height: 22px;
+	line-height: 21px;
 	font-weight: 500;
 }
 .footer-artical ul li .flxrow .text-holder p a{
@@ -2197,6 +2278,22 @@ input[type="text"]::placeholder{
 }
 .quoteBtn:hover{
 	background: var(--primary);
+	color: var(--white);
+}
+.exploreBtn{
+	background: var(--primary);
+	padding: 10px 19px;
+    font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--white);
+	margin: 20px 0;
+	border-radius: 5px;
+	display: inline-block;
+}
+.exploreBtn:hover{
+	background: #148E85;
+	color: var(--white);
 }
 .phone-number-tracking{
 	color: black;
@@ -2389,8 +2486,87 @@ input[type="text"]::placeholder{
 	margin-bottom: 5px;
 	line-height: 1.6;
 }
-
-
+.mob-block{
+	display: none;
+}
+.meth-cardSec{
+	width: 100%;	
+}
+.meth-cardSec-flx{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.meth-cardSec-col{
+	width: 30%;
+	text-align: center;
+	padding: 10px;
+}
+.meth-cardSec-col img{
+	margin-bottom: 20px;
+}
+.meth-cardSec-col h2{
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: var(--black);
+	padding-bottom: 10px;
+	margin-bottom: 0;
+}
+.meth-cardSec-col p{
+	font-size: 17px;
+	color: var(--textColor);
+	line-height: 1.7;
+}
+.methodologySecFlx{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.methodologySecCol{
+	width: 48%;
+	position: relative;
+}
+.methodologySecCol:after{
+	content: "";
+	background: #a5afff;
+	width: 7px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	border-radius: 8px 0 0 8px;
+}
+.methodologySecCol:hover{
+	cursor: pointer;
+	transform: translateY(-5px);
+    transition: .2s;
+	box-shadow: 0 0 15px 0 rgba(73, 92, 231, 0.5);
+}
+.methodologySecCol:hover:after{
+	background: var(--primary);
+}
+.methodologySecCol .vetting-textholder h3{
+	padding-top: 8px;
+}
+.partnership-head h2{
+	margin-bottom: 20px;
+	font-size: 1.7rem !important;
+	color: black;
+    font-weight: 500;
+}
+.number-round{
+	background: var(--primary);
+	width: 30px;
+	height: 30px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 17px;
+	font-weight: 600;
+	color: var(--white);
+	border-radius: 100%;
+	margin-right: 15px;
+}
 
 
 /*=========================== Responsive Style Sheet Start Here ===========================*/
@@ -2550,7 +2726,7 @@ input[type="text"]::placeholder{
 		margin: 0 auto;
 	}
 	.logo {
-		width: 230px;
+		width: 200px;
 	}
 	.form-search{
 		display: none;
@@ -2628,6 +2804,11 @@ input[type="text"]::placeholder{
 	}
 	.footerNews {
 		height: auto;
+	}
+	.mob-block{
+		display: block;
+		width: 100%;
+		margin-bottom: 20px;
 	}
 }
 
