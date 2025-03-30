@@ -225,3 +225,4 @@ $('.Hide').click(function() {
 $('.toggle').click(function() {
   $('#target').toggle('slow');
 });
+

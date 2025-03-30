@@ -2225,7 +2225,7 @@ input[type="text"]::placeholder{
 	justify-content: space-between;	
 }
 .bestCompaniescol{
-	width: 73%;
+	width: 100%;
 }
 .bestCompaniescolRight{
 	width: 24%;
@@ -2235,34 +2235,90 @@ input[type="text"]::placeholder{
 	box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.2);
 	margin-bottom: 40px;
 	position: relative;
-	padding: 25px 0;
+	padding:10px 0 15px;
 	border-radius: 5px;
 }
+.ribbon {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    text-align: right;
+ }
+ .ribbon span {
+	font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    line-height: 35px;
+    transform: rotate(45deg);
+    width: 235px;
+    display: block;
+    background: #495ce7;
+    background: linear-gradient(#495ce7 0%, #313faf 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 55px;
+    right: -45px;
+ }
+ .ribbon span:before {
+	content: '';
+	position: absolute; 
+	left: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid #313faf;
+	border-right: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #313faf;
+ }
+ .ribbon span:after {
+	content: '';
+	position: absolute; 
+	right: 0%; top: 100%;
+	z-index: -1;
+	border-right: 3px solid #313faf;
+	border-left: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #313faf;
+ }
 .companyList .sr-no {
     background-color: #1C4A47;
     display: flex;
     color: white;
     font-size: 15px;
     width: 37px;
-    height: 37px;
+    height: 34px;
     position: absolute;
     top: 0px;
-    right: 0;
+    left: 0;
     justify-content: center;
     align-items: center;
 	border-radius: 0 5px 0 0;
+}
+.comTitleFlax{
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.comTitleFlax h2{
+	padding-bottom: 0;
 }
 .companyListFlx{
 	display: flex;
 	justify-content: space-between;
 	position: relative;
-	padding: 20px 0 0;
+	padding: 10px 20px 0 0;
 }
 .companyListFlx-leftCol{
-	width: 24%;
+	width: 25%;
+	text-align: center;
 }
 .companyListFlx-midCol{
-	width: 52%;
+	width: 72%;
 }
 .companyListFlx-rightCol{
 	width: 20%;
@@ -2288,8 +2344,8 @@ input[type="text"]::placeholder{
 }
 .companyListFlx .offer-block {
     border: 2px dashed #1564BF;
-    padding: 10px;
-    display: flex;
+    padding: 10px 25px;
+    display: inline-flex;
     align-items: center;
 	margin: 20px 0;
 }
@@ -2309,17 +2365,22 @@ input[type="text"]::placeholder{
 .listrating-block {
     display: flex;
     border: 1px solid lightgrey;
+	border-radius: 10px;
+	padding: 3px 10px;
+	font-size: 16px;
+	font-weight: 500;
+	margin-left: 15px;
+}
+.listrating-block img{
+	width: 100px;
 }
 .rating-block-left {
-    background: var(--primary);
-    color: white;
-    padding: 11px 7px;
+    color: black;
     font-weight: bold;
-    font-size: 21px;
-    max-width: 49px;
-    min-width: 49px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
+	padding: 0 5px;
 }
 .rating-block-right{
 	text-align: center;
@@ -2339,13 +2400,14 @@ input[type="text"]::placeholder{
     margin:0 auto 10px;
 }
 .quoteBtn{
-	background: #148E85;
-	padding: 8px 19px;
+	background: #495ce7;
+	background: linear-gradient(#495ce7 0%, #313faf 100%);
+	padding: 6px 15px;
     font-size: 15px;
 	text-transform: uppercase;
 	font-weight: 600;
 	color: var(--white);
-	margin: 20px 0;
+	margin: 20px 0 20px;
 	border-radius: 5px;
 }
 .quoteBtn:hover{
@@ -2372,6 +2434,9 @@ input[type="text"]::placeholder{
     font-size: 15px;
     font-weight: 700;
     text-decoration: underline;
+	display: block;
+    margin-bottom: 20px;
+    margin-top: 0 !important;
 }
 .phone-number-tracking svg{
 	margin-right: 5px;
@@ -2394,7 +2459,7 @@ input[type="text"]::placeholder{
     border-top: 1px solid #dee2e6;
 }
 .companyList-price{
-	padding: 20px 0 0;
+	padding: 10px 0 0;
 }
 .companyList-price ul{
 	display: flex;
@@ -2410,7 +2475,7 @@ input[type="text"]::placeholder{
 }
 .companyList-price ul li span{
 	display: block;
-	font-weight: 17px;
+	font-size: 17px;
 	font-weight: 700;
 }
 #target {
@@ -2418,12 +2483,18 @@ input[type="text"]::placeholder{
 	height:auto;	
 	padding:20px 20px 10px 20px;
 	display:none;
-  }  
+  } 
+  #target2 {
+	width:100%;
+	height:auto;	
+	padding:20px 20px 10px 20px;
+	display:none;
+  } 
   .Hide{
 	display:none;
   }
   .view-more-less-btn{
-	color: #10837A;
+	color: var(--primary);
 	background: none;
 	border: none;
 	font-size: 17px;
@@ -2544,6 +2615,10 @@ input[type="text"]::placeholder{
 }
 .mr-25{
 	margin-right: 25px;
+}
+.mr-25 img{
+	width: 83px;	
+	max-width: max-content;
 }
 .vetting-textholder h3{
 	font-size: 1.2555rem;
@@ -2752,7 +2827,8 @@ input[type="text"]::placeholder{
 		height: auto;
 	}
 	.brands-box {
-		width: 90%;
+		width: 100%;
+		margin: 0 auto;
 	}
 	.brands-sec .brands-header h2{
 		text-align: center;
@@ -2807,7 +2883,7 @@ input[type="text"]::placeholder{
 		height: auto;
 	}
 	.footer-artical p {
-		text-align: center;
+		text-align: left;
 	}
 	.signup-form-sec{
 		flex-wrap: wrap;
@@ -2881,6 +2957,125 @@ input[type="text"]::placeholder{
 		display: block;
 		width: 100%;
 		margin-bottom: 20px;
+	}
+	.topCompaniesGrid{
+		display: block;
+	}
+	.companyCard{
+		margin-bottom: 20px;
+		width: 100%;
+		height: auto;
+	}
+	.ehw-highlight {
+		height: auto;
+		top: 0;
+		padding: 10px;
+	}
+	.companyListFlx{
+		flex-wrap: wrap;
+	}
+	.companyListFlx-leftCol {
+		width: 100%;
+		text-align: center;
+	}
+	.companyListFlx-leftCol img{
+		width: 50%;
+        display: block;
+        margin: 0 auto;
+	}
+	.companyListFlx-midCol {
+		width: 100%;
+		padding: 20px;
+	}
+	.comTitleFlax{
+		flex-wrap: wrap;
+	}
+	.listrating-block{
+		margin-left: 0;
+		margin-top: 10px;
+	}
+	.companyList-price ul {
+		flex-wrap: wrap;
+	}
+	.companyList-price ul li {
+		width: 47%;
+	}
+	.vetting-processRow{
+		flex-wrap: wrap;
+		text-align: center;
+	}
+	.mr-25 {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.proleft-50 {
+		width: 100%;
+	}
+	.proDetailsflex-right {
+		width: 100%;
+		order: 1;
+		margin: 20px 0 40px;
+	}
+	.proDetailsflex-left {
+		order: 2;
+	}
+	.mt-70 {
+		margin-top: 0 !important;
+	}
+	.footer{
+		margin-top: 50px;
+	}
+	.prodetails-sec {
+		margin-bottom: 20px;
+	}
+	.brands-carousel{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.brands-carousel .item{
+		margin-bottom: 20px;
+	}
+	.meth-cardSec-col {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	.methodologySec {
+		margin-top: 0px;
+	}
+	.methodologySecCol{
+		width: 100%;
+	}
+	.effect5:before, .effect5:after{
+		display: none;
+	}
+	.signupbg-inner2:before, .signupbg-inner2:after{
+		display: none;
+	}
+	.signupbg2 {
+		padding: 0;
+	}
+	.signupbg-inner2{
+		width: 100%;
+		padding: 50px 30px;
+		border-radius: 20px;
+	}
+	.proDetails-flx h2{
+		line-height: 1.3;
+	}
+	.width60 {
+		width: 100% !important;
+	}
+	.trust-col-right{
+		margin-top: 40px;
+	}
+	.order-one{
+		order: 1;
+	}
+	.order-two{
+		order: 2;
+	}
+	.trustmobGap{
+		margin-top: 50px;
 	}
 }
 
