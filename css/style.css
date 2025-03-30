@@ -979,13 +979,85 @@ input[type="text"]::placeholder{
     background: url(../images/banner-shadow.png) 0 0 no-repeat #1f2a65;
     background-size: cover;
     border-radius: 20px;
+	padding: 50px 0;
+}
+.signupbg2{
+    width: 100%;
+    /* background: url(../images/banner-shadow.png) 0 0 no-repeat #1f2a65;
+    background-size: cover;
+    border-radius: 20px; */
+	padding: 50px;
 }
 .signupbg-inner{
     width: 100%;
-    /* background: url(../images/news-bg.png) 0 0 no-repeat; */
-    background-size: cover;
     border-radius: 20px;
+	/* padding: 60px 0 70px; */
+	position: relative;
+}
+.signupbg-inner2{
+    width: 93%;
+	margin: 0 auto;
+    background: url(../images/contact-formbg.png) center center no-repeat #1f2a65;
+	background-size: contain;
+    /* border-radius: 20px; */
 	padding: 60px 0 70px;
+	position: relative;
+	box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .9);
+}
+.signupbg-inner2:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100px;
+    background: url(../images/contact-bg-left.png) 0 0 no-repeat;
+    width: 100px;
+    height: 100%;
+    background-size: cover;
+}
+.signupbg-inner2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -102px;
+    background: url(../images/contact-bg-right.png) 0 bottom no-repeat;
+    width: 154px;
+    height: 100%;
+    background-size: cover;
+	
+}
+.effect5
+{
+  position: relative;
+}
+.effect5:before, .effect5:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 50px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 35px 20px #777;
+  -moz-box-shadow: 0 35px 20px #777;
+  box-shadow: 0 35px 20px #777;
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+.effect5:after
+{
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  right: 50px;
+  left: auto;
 }
 .signup-sec h2{
 	font-size: 1.375rem;
@@ -1007,7 +1079,7 @@ input[type="text"]::placeholder{
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 20px;
-	max-width: 80%;
+	max-width: 90%;
 	margin: 0 auto 25px;
 }
 .signup-form-col{
@@ -1066,7 +1138,7 @@ input[type="text"]::placeholder{
 .blackText{
 	color: var(--black) !important;
 }
-.selectDropDown select{
+/* .selectDropDown select{
 	background-image: linear-gradient(45deg, transparent 50%, white 50%),
     linear-gradient(135deg, white 50%, transparent 50%),
     linear-gradient(to right, transparent, transparent);
@@ -1075,7 +1147,7 @@ input[type="text"]::placeholder{
 	calc(100% - 2.8em) 0.9em;
 	background-size: 5px 5px, 5px 5px, 1px 1.5em;
 	background-repeat: no-repeat;
-}
+} */
 .signup-form-col textarea{
 	border: 1px solid #0b1130;
     border-radius:30px;
@@ -1105,7 +1177,7 @@ input[type="text"]::placeholder{
     background: #131c53;
 }
 .signup-sec input[type="submit"]:hover{
-	background: #2ecf9d;
+	background: var(--white);
     color: var(--black);
     border: solid 1px #2ecf9d;
 }
