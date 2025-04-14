@@ -2812,7 +2812,7 @@ input[type="text"]::placeholder{
 	height: 8px;
 	border-radius: 100%;
 	position: absolute;
-	top: 10px;
+	top: 9px;
 	left: 0;
 }
 .listFlx h3{
@@ -3330,6 +3330,28 @@ input[type="text"]::placeholder{
 	}
 	.serviceCol ul{
 		margin-bottom: 30px;
+	}
+	.subscribeSec{
+		width: 100%;
+	}
+	.promoBanner .quoteBtn {
+		bottom: -10px;
+		padding: 7px 15px;
+		font-size: 14px;
+	}
+	.plr-20{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.listFlx{
+		flex-wrap: wrap;
+	}
+	.listFlxLeftCol {
+		width: 100%;
+	}
+	.listFlxRightCol {
+		width: 100%;
+		margin-top: 20px;
 	}
 }
 
