@@ -1893,9 +1893,18 @@ input[type="text"]::placeholder{
   .articlesSecFlx p{
 	line-height: 2.0;
   }
+
   .card__group {
 	display: grid;
 	height: calc(600px * 15 / 9);
+	grid-template-columns: repeat(3, 1fr);
+	/* grid-template-rows: repeat(5, 1fr); */
+	gap: 2rem;
+	padding: 2rem 0;
+  }
+  .card__group-related {
+	display: grid;
+	height: auto;
 	grid-template-columns: repeat(3, 1fr);
 	/* grid-template-rows: repeat(5, 1fr); */
 	gap: 2rem;
@@ -1931,7 +1940,7 @@ input[type="text"]::placeholder{
 	&:nth-of-type(1) {
 		grid-row: 1 / 1;
         height: 440px;
-	}
+	}	
 	/* p{
 	  padding-top: 15px;
 	} */
@@ -1956,10 +1965,81 @@ input[type="text"]::placeholder{
 		}
 	}
   }
-  
+  .card-related {
+	--var-opacity: 0;
+	width: 100%;
+	/* height: 100%; */
+	background-color: #f8f8f8;
+	border-radius: 0.5rem;
+	/* display: grid; */
+	grid-template-rows: auto 50%;
+	padding: 1rem;
+	overflow: hidden;
+	transition: grid-template-rows 300ms ease-in-out;
+	box-shadow: 0 16px 12px -8px #1e1e1e1e;
+	&:nth-of-type(6) {
+	  grid-row: auto;
+	}
+	&:nth-of-type(5) {
+	  grid-row: auto;
+	}
+	&:nth-of-type(4) {
+	  grid-row: auto;
+	}  
+	&:nth-of-type(3) {
+	  grid-row: auto;
+	}
+	&:nth-of-type(2) {
+	  grid-row: auto;
+	}
+	&:nth-of-type(1) {
+		grid-row: auto;
+        height: auto;
+	}	
+	/* p{
+	  padding-top: 15px;
+	} */
+	h2{
+	  font-size: 43px;
+	  color: #000;
+	  font-weight: 500;
+	}
+	&:hover{
+		background: var(--primary);
+		color: var(--white);
+		cursor: pointer;
+		-moz-transition: all .3s ease-in;		
+		-webkit-transition: all .3s ease-in;		
+		-o-transition: all .3s ease-in;
+		transition: all .3s ease-in;
+		p{
+			color: var(--white);	
+		}
+		a{
+			color: var(--white);	
+		}
+	}
+  }
   .card__image {
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
+	border-radius: inherit;
+	background-color: #f4f6ff;
+	position: relative;
+	img {
+	  position: relative;
+	  z-index: 100;
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+	  object-position: center;
+	  right:0px;
+	}
+  }
+  .card__image-related {
+	width: 100%;
+	height: 200px;
 	overflow: hidden;
 	border-radius: inherit;
 	background-color: #f4f6ff;
@@ -2779,6 +2859,57 @@ input[type="text"]::placeholder{
   .checkSecCol input[type=checkbox]:checked + label{
 	color: var(--white);
   } 
+
+  .checkSecCol [type="radio"]:checked,
+  .checkSecCol [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.checkSecCol [type="radio"]:checked + label,
+.checkSecCol [type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #c0c0c0;
+}
+.checkSecCol [type="radio"]:checked + label:before,
+.checkSecCol [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+.checkSecCol [type="radio"]:checked + label:after,
+.checkSecCol [type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: var(--blueColor);
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.checkSecCol [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.checkSecCol [type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
 .listFlx{
 	display: flex;
 	justify-content: space-between;
@@ -2937,8 +3068,38 @@ input[type="text"]::placeholder{
 	text-align: center;
 	margin-bottom: 40px;
 }
+.listPoint li{
+	position: relative;
+	font-size: 1.05rem !important;
+    color: var(--textColor);
+    font-weight: 500;
+	line-height: 1.8;
+	padding-left: 20px;
+}
+.listPoint li:before{
+    content: "";
+    background: green;
+    width: 8px;
+    height: 8px;
+    border-radius:0;
+    position: absolute;
+    top: 11px;
+    left: 0;
+} 
+.justifyCenter{
+	justify-content: center !important;
+} 
+.claimList li{
+    margin-top: 15px;
+}
+.claimList li h3{
+	margin-bottom: 9px;
+}
+.claimList li:before{
+    top: 6px;
+}
 
-  
+
 
 /*=========================== Responsive Style Sheet Start Here ===========================*/
 
